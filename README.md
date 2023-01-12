@@ -56,12 +56,12 @@ Plan of the project
 <code>MINLEN:20</code><p> - 
 
 
-<code>trimmomatic PE -phred33 ./raw/amp_res_1.fastq ./raw/amp_res_2.fastq 30_paired1.fq 30_single1.fq 30_paired2.fq 30_single2.fq LEADING:30 TRAILING:30 SLIDINGWINDOW:10:30 MINLEN:20 ILLUMINACLIP:/home/donya/anaconda3/pkgs/trimmomatic-0.39-hdfd78af_2/share/trimmomatic-0.39-2/adapters/TruSeq3-PE-2.fa:2:30:10</code>
+<code>trimmomatic PE -phred33 ./raw/amp_res_1.fastq ./raw/amp_res_2.fastq 30_paired1.fq 30_single1.fq 30_paired2.fq 30_single2.fq LEADING:30 TRAILING:30 SLIDINGWINDOW:10:30 MINLEN:20 ILLUMINACLIP:/home/donya/anaconda3/pkgs/trimmomatic-0.39-hdfd78af_2/share/trimmomatic-0.39-2/adapters/TruSeq3-PE-2.fa:2:30:10</code><p>
 
 <code>LEADING:30</code><p> - 
 <code>TRAILING:30</code><p> - 
 <code>SLIDINGWINDOW:10:30 </code><p> - 
-<code>MINLEN:20</code> - 
+<code>MINLEN:20</code><p>
   
 5. Activate conda<p>
 <code>conda activate</code>
