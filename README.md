@@ -10,7 +10,7 @@ Plan of the project
 ## Preparation 
 
 1. Create a new directory <p>
-<code>mkdir HW1</code>
+<code>mkdir HW1
 
 2. Go to the new directory <p>
 <code>cd ./HW1</code>
@@ -24,7 +24,7 @@ Plan of the project
 <code>wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2_ASM584v2/GCF_000005845.2_ASM584v2_genomic.gff.gz </code>
 
 5. Unzip the downloaded files <p>
-<code>gunzip GCF_000005845.2_ASM584v2/GCF_000005845.2_ASM584v2_genomic.fna.gz</code>
+<code>gunzip GCF_000005845.2_ASM584v2/GCF_000005845.2_ASM584v2_genomic.fna.gz</code> <p>
 <code>gunzip GCF_000005845.2_ASM584v2/GCF_000005845.2_ASM584v2_genomic.gff.gz</code>
 
 6. Upload the reads (amp_res_1.fastq and amp_res_2.fastq) to the ./raw folder manually <p>
