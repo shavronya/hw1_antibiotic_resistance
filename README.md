@@ -1,12 +1,15 @@
 # What causes antibiotic resistance?
 
 SCAMT bioinformatics course 2022-2023
+E.coli strain K-12 substrain MG1655
 
 Plan of the project
 1. Get data
-2. Get to know data
-3. 
-
+2. Inspect data
+3. Control reads quality
+4. Filter the reads
+5. Align sequences to reference
+6. 
 
 ## Get data
 
@@ -30,7 +33,7 @@ Unzip the downloaded files<p>
 
 Upload the reads (amp_res_1.fastq and amp_res_2.fastq) to the ./raw folder manually <p>
 
-## Get to know data
+## Inspect data
 
 <code>head -20 amp_res_1.fastq</code><p>
 <code>head -20 amp_res_2.fastq</code><p>
@@ -45,7 +48,7 @@ Install FastQC using conda <p>
 Quality control <p>
 <code>fastqc ./raw/amp_res_1.fastq ./raw/amp_res_2.fastq -o ./output </code>
 
-## Trim
+## Filter the reads
   
 Install Trimmomatic<p>
 <code>conda create -n trimmomatic -c bioconda -c conda-forge -c defaults trimmomatic</code>
@@ -77,34 +80,34 @@ Quality control<p>
 <code>fastqc paired1.fq paired2.fq -o ./output</code><p>
 <code>fastqc 30_paired1.fq 30_paired2.fq -o ./output</code> 
   
-## Align
+## Align sequences to reference
   
 Install BWA<p>
 <code>conda install -c bioconda bwa</code><p>
 
- <p>
-<code>bwa index ./raw/GCF_000005845.2_ASM584v2_genomic.fna</code><p>
+Index the reference file<p>
+<code>bwa index GCF_000005845.2_ASM584v2_genomic.fna</code><p>
 
- <p>
-<code>bwa mem ./raw/GCF_000005845.2_ASM584v2_genomic.fna paired1.fq paired2.fq > alignment.sam</code><p>
+Align the reads<p>
+<code>bwa mem GCF_000005845.2_ASM584v2_genomic.fna paired1.fq paired2.fq > alignment.sam</code><p>
 
-## Compress SAM file to BAM
+## Compress SAM file
 
-<p>
+Install SamTools<p>
 <code> conda install -c bioconda samtools</code><p>
 
-<p>
+Covert sam to bam<p>
 <code>samtools view -S -b alignment.sam > alignment.bam</code><p>
 
-<p>
+Get some basic statistics<p>
 <code>samtools flagstat alignment.bam</code><p>
 
 ## Sort and index BAM file 
 
- <p>
+Sort BAM file by sequence coordinate on reference<p>
 <code>samtools sort alignment.bam -o alignment_sorted.bam</code><p>
 
-<p>
+Index bam file for faster search<p>
 <code>samtools index alignment_sorted.bam</code><p>
 
 Go to IGV browser (https://igv.org/app/)<p>
@@ -113,13 +116,13 @@ Tracks -> Local file (.bam + .bam.bai)<p>
 
 ## Call variants
 
-<p>
-<code>samtools mpileup -f ./raw/GCF_000005845.2_ASM584v2_genomic.fna alignment_sorted.bam > my.mpileup</code><p>
+Create an intermediate mpileup file<p>
+<code>samtools mpileup -f GCF_000005845.2_ASM584v2_genomic.fna alignment_sorted.bam > my.mpileup</code><p>
 
-<p>
+Install VarScan<p>
 <code>conda install -c bioconda varscan</code>
 
-<p>
+Filter data using VarScan<p>
 <code>varscan mpileup2snp my.mpileup —min-var-freq 0.70 —variants —output-vcf 1 > VarScan_results.vcf</code>
 
 ## Predict variant effect
@@ -129,7 +132,7 @@ Tracks -> Local file (.gff)<p>
 Tracks -> Local file (.bam + .bam.bai)<p>
 Tracks -> Local file (.vcf)<p>
 
-<p>
+Inspect VCF file for SNPs<p>
 <code>cat VarScan_results.vcf</code>
 
 
