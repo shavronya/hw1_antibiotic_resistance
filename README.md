@@ -38,5 +38,8 @@ Plan of the project
 <code> fastqc ./raw/amp_res_1.fastq ./raw/amp_res_2.fastq -o ./output </code>
 
 ## Trimming
-1. 
+  
+1. Install Trimmomatic
+<code>conda create -n trimmomatic -c bioconda -c conda-forge -c defaults trimmomatic</code>
 
+ 2. 
