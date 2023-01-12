@@ -1,6 +1,6 @@
 # What causes antibiotic resistance?
 
-SCAMT bioinformatics course 2022-2023
+SCAMT bioinformatics course 2022-2023<p>
 E.coli strain K-12 substrain MG1655
 
 Plan of the project
