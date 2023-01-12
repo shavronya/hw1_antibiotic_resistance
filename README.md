@@ -10,7 +10,7 @@ Plan of the project
 ## Preparation 
 
 1. Create a new directory <p>
-<code>mkdir HW1
+  <code>mkdir HW1</code>
 
 2. Go to the new directory <p>
 <code>cd ./HW1</code>
@@ -34,6 +34,9 @@ Plan of the project
 1. Install FastQC using conda <p>
 <code>conda install -c bioconda fastqc</code>
 
-2. 
+2. Quality control <p>
+<code> fastqc ./raw/amp_res_1.fastq ./raw/amp_res_2.fastq -o ./output </code>
 
+## Trimming
+1. 
 
