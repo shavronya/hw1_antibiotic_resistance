@@ -150,7 +150,7 @@ Install VarScan<p>
 <code>conda install -c bioconda varscan</code>
 
 Filter data using VarScan<p>
-<code>varscan mpileup2snp my.mpileup —min-var-freq 0.70 —variants —output-vcf 1 > VarScan_results.vcf</code>
+<code>varscan mpileup2snp my.mpileup --min-var-freq 0.70 --variants --output-vcf 1 > VarScan_results.vcf</code>
 
 ## Predict variant effect
 Go to IGV browser (https://igv.org/app/)<p>
