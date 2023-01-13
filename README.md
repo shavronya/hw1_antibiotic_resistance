@@ -101,7 +101,7 @@ Evaluate read quanitity
 Quality control<p>
 <code>fastqc paired1.fq paired2.fq -o ./output</code><p>
 <code>fastqc 30_paired1.fq 30_paired2.fq -o ./output</code> <p>
-Number of reads are the same with earlier defined with wc -l <p>  
+Number of reads are the same with earlier defined with wc -l<p>
 1784060 / 4 = 446015 reads for paired seq Q20 <p>
 1504536 / 4 = 376134 reads for paired seq Q30 <p>
 Forward reads: Per tile sequence quality is in a red zone. Per base sequence content, Per sequence GC content, Sequence Length Distribution, Kmer Content. <p>
