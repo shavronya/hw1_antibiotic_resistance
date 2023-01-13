@@ -31,8 +31,8 @@ Upload the reference genome and its annotation <p>
 <code>wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2_ASM584v2/GCF_000005845.2_ASM584v2_genomic.gff.gz </code>
 
 Unzip the downloaded files<p>
-<code>gunzip GCF_000005845.2_ASM584v2/GCF_000005845.2_ASM584v2_genomic.fna.gz</code> <p>
-<code>gunzip GCF_000005845.2_ASM584v2/GCF_000005845.2_ASM584v2_genomic.gff.gz</code>
+<code>gunzip GCF_000005845.2_ASM584v2_genomic.fna.gz</code> <p>
+<code>gunzip GCF_000005845.2_ASM584v2_genomic.gff.gz</code>
 
 Upload the reads (amp_res_1.fastq and amp_res_2.fastq) to the ./raw folder manually <p>
 
