@@ -79,6 +79,10 @@ Trimming with defined parameters<p>
   
 Activate conda<p>
 <code>conda activate</code>
+  
+Evaluate read quanitity
+<code>wc -l paired1.fq > ./output/wc_paired1.txt</code>
+<code>wc -l paired2.fq > ./output/wc_paired2.txt</code>
 
 Quality control<p>
 <code>fastqc paired1.fq paired2.fq -o ./output</code><p>
