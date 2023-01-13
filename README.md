@@ -3,7 +3,9 @@
 SCAMT bioinformatics course 2022-2023<p>
   <i>E.coli</i> strain K-12 substrain MG1655 <p>
 
-Article https://docs.google.com/document/d/1rj14Ld7YGTi165NzY1FXQWtvbIn9YEqN/edit?usp=sharing&ouid=105484363120367893957&rtpof=true&sd=true <p>
+Article: https://docs.google.com/document/d/1rj14Ld7YGTi165NzY1FXQWtvbIn9YEqN/edit?usp=sharing&ouid=105484363120367893957&rtpof=true&sd=true <p>
+Raw data: <p> 
+Outputs: <p>
 
 Plan of the project
 1. Get data
@@ -45,13 +47,21 @@ Upload the reads (amp_res_1.fastq and amp_res_2.fastq) to the ./raw folder manua
 <code>cat GCF_000005845.2_ASM584v2_genomic.fna</code><p>
 <code>cat GCF_000005845.2_ASM584v2_genomic.gff</code><p>
 
+<code>wc -l ./raw/amp_res_1.fastq</code><p>
+<code>wc -l ./raw/amp_res_2.fastq</code><p>
+1823504 stings / 4 = 455876 reads <p>
+
 ## Control reads quality
 
 Install FastQC using conda <p>
 <code>conda install -c bioconda fastqc</code>
 
 Quality control <p>
-<code>fastqc ./raw/amp_res_1.fastq ./raw/amp_res_2.fastq -o ./output </code>
+<code>fastqc ./raw/amp_res_1.fastq ./raw/amp_res_2.fastq -o ./output </code><p>
+Number of reads are the same with earlier defined with wc -l <p>
+Forward reads: Per base sequence quality, Per tile sequence quality are in a red zone. Per base sequence content, Per sequence GC content, Kmer Content are in a yellow zone. The rest ones are green.<p>
+Reverse reads: Per base sequence quality is in a red zone. Per tile sequence quality, Per base sequence content, Per sequence GC content, Kmer Content are in a yellow zone. The rest ones are green.<p>
+We need to make it green, at least yellow. <p>
 
 ## Filter the reads
   
@@ -86,12 +96,15 @@ Evaluate read quanitity
 <code>wc -l paired1.fq</code><p>
 <code>wc -l paired2.fq</code><p>
 <code>wc -l 30_paired1.fq</code><p>
-<code>wc -l 30_paired2.fq</code>
-  
+<code>wc -l 30_paired2.fq</code><p>
 
 Quality control<p>
 <code>fastqc paired1.fq paired2.fq -o ./output</code><p>
 <code>fastqc 30_paired1.fq 30_paired2.fq -o ./output</code> 
+Number of reads are the same with earlier defined with wc -l <p>  
+1784060 / 4 = 446015 reads for paired seq Q20 <p>
+1504536 / 4 = 376134 reads for paired seq Q30 <p>
+
   
 ## Align sequences to reference
   
