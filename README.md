@@ -40,8 +40,8 @@ Upload the reads (amp_res_1.fastq and amp_res_2.fastq) to the ./raw folder manua
 
 <code>head -20 amp_res_1.fastq</code><p>
 <code>head -20 amp_res_2.fastq</code><p>
-<code>cat GCF_000005845.2_ASM584v2/GCF_000005845.2_ASM584v2_genomic.fna</code><p>
-<code>cat GCF_000005845.2_ASM584v2/GCF_000005845.2_ASM584v2_genomic.gff</code><p>
+<code>cat GCF_000005845.2_ASM584v2_genomic.fna</code><p>
+<code>cat GCF_000005845.2_ASM584v2_genomic.gff</code><p>
 
 ## Control reads quality
 
