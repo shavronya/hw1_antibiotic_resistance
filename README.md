@@ -61,8 +61,7 @@ Deactivate conda<p>
 
 Activate Trimmomatic<p>
 <code>conda activate trimmomatic</code>
-  
-<code>cd ../</code>
+ 
 
 Trimming with defined parameters<p>
 <code>trimmomatic PE -phred33 ./raw/amp_res_1.fastq ./raw/amp_res_2.fastq paired1.fq single1.fq paired2.fq single2.fq LEADING:20 TRAILING:20 SLIDINGWINDOW:10:20 MINLEN:20 ILLUMINACLIP:/path/to/pkgs/trimmomatic-0.39-hdfd78af_2/share/trimmomatic-0.39-2/adapters/TruSeq3-PE-2.fa:2:30:10</code><p>
