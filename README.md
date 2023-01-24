@@ -91,7 +91,7 @@ Trimming with defined parameters<p>
 Activate conda<p>
 <code>conda activate</code>
   
-Evaluate read quanitity
+Evaluate read quanitity<p>
 <code>wc -l paired1.fq</code><p>
 <code>wc -l paired2.fq</code><p>
 <code>wc -l 30_paired1.fq</code><p>
